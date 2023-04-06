@@ -5,93 +5,7 @@ import Card from "@/component/card";
 import Header from "@/component/header";
 import { useEffect, useState } from "react";
 import axios from "axios";
-
-const stockData = [
-  {
-    name: "federalbnk",
-    qty: 100,
-    current: 133.7,
-    percentage: "(0.00) 0.00%",
-  },
-  {
-    name: "Kpittech",
-    qty: 350,
-    current: 709.65,
-    percentage: "(-0.70) 0.11%",
-  },
-  {
-    name: "wipro",
-    qty: 300,
-    current: 386.69,
-    percentage: "(-3.90) 1.34%",
-  },
-  {
-    name: "federalbnk",
-    qty: 100,
-    current: 133.7,
-    percentage: "(0.00) 0.00%",
-  },
-  {
-    name: "Kpittech",
-    qty: 350,
-    current: 709.65,
-    percentage: "(-0.70) 0.11%",
-  },
-  {
-    name: "wipro",
-    qty: 300,
-    current: 386.69,
-    percentage: "(-3.90) 1.34%",
-  },
-  {
-    name: "wipro",
-    qty: 300,
-    current: 386.69,
-    percentage: "(-3.90) 1.34%",
-  },
-  {
-    name: "federalbnk",
-    qty: 100,
-    current: 133.7,
-    percentage: "(0.00) 0.00%",
-  },
-  {
-    name: "Kpittech",
-    qty: 350,
-    current: 709.65,
-    percentage: "(-0.70) 0.11%",
-  },
-  {
-    name: "wipro",
-    qty: 300,
-    current: 386.69,
-    percentage: "(-3.90) 1.34%",
-  },
-  {
-    name: "wipro",
-    qty: 300,
-    current: 386.69,
-    percentage: "(-3.90) 1.34%",
-  },
-  {
-    name: "federalbnk",
-    qty: 100,
-    current: 133.7,
-    percentage: "(0.00) 0.00%",
-  },
-  {
-    name: "Kpittech",
-    qty: 350,
-    current: 709.65,
-    percentage: "(-0.70) 0.11%",
-  },
-  {
-    name: "wipro",
-    qty: 300,
-    current: 386.69,
-    percentage: "(-3.90) 1.34%",
-  },
-];
+import stock from "@/utils/data/stock";
 
 export default function Home() {
   const [stocks, setStocks] = useState([]);
@@ -141,7 +55,7 @@ export default function Home() {
       console.error(error);
     }
   };
-  
+
   return (
     <>
       <div className="">
@@ -165,7 +79,7 @@ export default function Home() {
           </div>
           <h2 className="text-sm font-semibold my-3 text-gray-500">NIFTY50 STOCKS</h2>
           {
-            stockData.map((stock,idx)=>{
+            stock.map((stock,idx)=>{
               return <Card key={idx} stock={stock} />
             })
           }
