@@ -77,12 +77,12 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <h2 className="text-sm font-semibold my-3 text-gray-500">NIFTY50 STOCKS</h2>
-          {
-            stock.map((stock,idx)=>{
-              return <Card key={idx} stock={stock} />
-            })
-          }
+          <h2 className="text-sm font-semibold my-3 text-gray-500">
+            NIFTY50 STOCKS
+          </h2>
+          {stock.map((stock, idx) => {
+            return <Card key={idx} stock={stock} />;
+          })}
         </div>
         <BottomNavigationBar />
       </div>

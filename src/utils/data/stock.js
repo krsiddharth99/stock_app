@@ -1,4 +1,4 @@
-export default stockData = [
+const stock = [
   {
     name: "federalbnk",
     qty: 100,
@@ -84,3 +84,5 @@ export default stockData = [
     percentage: "(-3.90) 1.34%",
   },
 ];
+
+export default stock;
