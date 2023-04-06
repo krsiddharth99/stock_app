@@ -1,3 +1,8 @@
+# Screenshot
+<div style="display:flex;justify-content:center;align-item:center">
+  <img src="https://github.com/krsiddharth99/stock_app/blob/main/public/screenshot.png" height="600" width="300"  alt="screenshot"/>
+</div>
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
